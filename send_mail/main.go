@@ -12,10 +12,12 @@ func main() {
 	subject := "Test Mail from Go"
 	body := "This is a test email sent from Go to Maildev."
 
-	msg := []byte("To: to@example.com\r\n" +
-		"Subject: " + subject + "\r\n" +
-		"\r\n" +
-		body + "\r\n")
+	msg := []byte(
+		"From: " + from + "\r\n" +
+			"To: to@example.com\r\n" +
+			"Subject: " + subject + "\r\n" +
+			"\r\n" +
+			body + "\r\n")
 
 	err := smtp.SendMail(
 		"localhost:1025", // Maildev SMTP
