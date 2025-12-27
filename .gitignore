@@ -1,0 +1,9 @@
+main
+*.out
+*.test
+.env
+.DS_Store
+tmp/
+
+
+# Test binary, built with "go test -c"
